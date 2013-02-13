@@ -25,6 +25,7 @@ Then I win the auction
 
 Given a user hands in 
   an item,
+  a type,
   a minimum price
   and an end date
 Then I should be able to tell my database to create the given item
@@ -40,7 +41,7 @@ Then I should be able to return an action state
 
 ### Search for item
 
-Given a search string provided my the user
+Given a search string provided by the user
 When the user clicks search
 Then it should be able to list all matched items
 
