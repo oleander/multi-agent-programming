@@ -1,5 +1,9 @@
 # Report
 
+## Agents
+
+![Agents](gaia.png)
+
 ## Roles
 
 ### Seller
