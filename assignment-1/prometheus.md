@@ -226,3 +226,6 @@ Events:
   - Partner: Mediator
   - Input: *{description: String, seller_id: Integer, min_price: Integer}*
   - Output: Void
+
+## Protocol
+
