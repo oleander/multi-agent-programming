@@ -153,44 +153,56 @@ Interaction description: Contact between Bidder and SearchHelper
 
 ## Agent descriptors
 
-Seller:
-  Description: offers items
-  Amount: N
-  Lifetime: Same life expectancy as the auction it self
-  COD: Always alive
-  Trigger: A notification about an action
-  Initialisation: None
-  Demise: Delete all corresponding auctions
-  Data to keep track of: None
-  Events:
-    - auction ends
-    - new bid
-Bidder:
-  Description: makes bids for auctions
-  Amount: N
-  Lifetime: Same life expectancy as the auction it self
-  Create or destroyed: Always alive
-  Trigger: A notification about an action
-  Initialisation: None
-  Demise: Delete all corresponding bidds
-  Data to keep track of: None
-  Events:
-    - auction ends
-    - new bid
-Mediator
-  Description: starts autions, receives bids, declares winner
-  Amount: Multiple based on dynamics of the system
-  Lifetime: Infinity
-  COD: Always alive
-  Trigger: 
-    - Bidder makes a bid
-    - Creation of an auction
-    - An action ends
-  Initialisation: Connection to database
-  Demise: Restart it and send alert
-  Data to keep track of: Auctions and bidds
-  Events:
+Name: Seller
+Description: offers items
+Cardinality: N/A
+Functionalities included: none from the outside perspective
+Reads data: user profile
+Writes data: user profile
+Lifetime: Same life expectancy as the auction it self
+Interacts with: Mediator
+Trigger: A notification about an action
+Demise: Delete all corresponding auctions
+Events:
+  - auction ends
+  - new bid
+
+---
+
+Name: Bidder:
+Description: makes bids for auctions
+Cardinality: N/A
+Functionalities included: none from the outside perspective
+Reads data: user profile
+Writes data: user profile
+Lifetime: Same life expectancy as the auction it self
+Interacts with: Mediator
+Create or destroyed: Always alive
+Triggers: A notification about an auction
+Demise: Delete all corresponding bidds
+Events:
+  - auction ends
+  - new bid
+
+---
+
+Name: Mediator
+Description: starts autions, receives bids, declares winner
+Cardinality: Multiple based on dynamics of the system
+Functionalities included: notifies users (bidders and sellers) about auctions, ends auctions, creates auctions, take bidds
+Reads data: user profile, auctions and bidds
+Writes data: auctions and bidds
+Trigger: 
+  - Bidder makes a bid
+  - Creation of an auction
+  - An action ends
+Initialisation: Connection to database
+Demise: Restart it and send alert
+Data to keep track of: Auctions and bidds
+Events:
     - 
+---
+
 Searcher:
   Description: receives search queries, searches through database
   Amount: Multiple based on dynamics of the system
