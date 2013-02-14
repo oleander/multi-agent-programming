@@ -220,7 +220,9 @@ Searcher:
 
 ## Capability descriptors
 ![Mediator](mediator capabilities.png)
-
+![Bidder](capabilities bidder.png)
+![Seller](capabilities bidder.png)
+![Searcher](capabilities searcher.png)
 ## Capability overview
 
 ## Event description
