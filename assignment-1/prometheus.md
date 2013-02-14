@@ -80,6 +80,14 @@ Then I should be able to return a list of matched auctions
   - bid on auctions
   - notify users (seller and bidder) about auctions
 
+  Name: Search
+  Description: Searches for auctions that matches a given query
+  Actions, Percepts, Events: SearchForItem
+  Data used and produced: AuctionDB, searchQuery, AuctionSearchResult
+  Interaction description: Contact between Bidder and SearchHelper
+
+  Name: 
+
 ## System overview
 
 ![prometheus](ov.png)
