@@ -160,8 +160,6 @@ Events:
 
 ![Mediator](mediator capabilities.png)
 
-## Capability overview
-
 ## Data description
 
 - notifyWinnerOfAuction()
