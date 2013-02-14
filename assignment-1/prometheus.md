@@ -91,6 +91,13 @@ Then I should
   
 ## System goals
 
+Name: SearchForItem
+Description: Searches for auctions that matches a given query
+Actions, Percepts, Events: NewSearch
+Data used and produced: AuctionDB, searchQuery, AuctionSearchResult
+Interaction description: Contact between Bidder and SearchHelper
+
+
 - Vilken funktionalitet ska systemet ha?
 
 ## Protocols
