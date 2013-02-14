@@ -86,8 +86,6 @@ Then I should be able to return a list of matched auctions
 
 ![prometheus](ov.png)
 
-=======
->>>>>>> e5850a435846d626c03adc37c6ab2694b6a0a4a5
 ## Agent descriptors
 
 Name: Seller  
