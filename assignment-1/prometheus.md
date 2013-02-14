@@ -154,6 +154,7 @@ Interaction description: Contact between Bidder and SearchHelper
 ## Agent descriptors
 
 Seller:
+  Description: offers items
   Amount: N
   Lifetime: Same life expectancy as the auction it self
   COD: Always alive
@@ -165,6 +166,7 @@ Seller:
     - auction ends
     - new bid
 Bidder:
+  Description: makes bids for auctions
   Amount: N
   Lifetime: Same life expectancy as the auction it self
   Create or destroyed: Always alive
@@ -176,6 +178,7 @@ Bidder:
     - auction ends
     - new bid
 Mediator
+  Description: starts autions, receives bids, declares winner
   Amount: Multiple based on dynamics of the system
   Lifetime: Infinity
   COD: Always alive
@@ -189,6 +192,7 @@ Mediator
   Events:
     - 
 Searcher:
+  Description: receives search queries, searches through database
   Amount: Multiple based on dynamics of the system
   Lifetime: Infinity
   COD: Always alive
