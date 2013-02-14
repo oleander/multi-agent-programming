@@ -1,5 +1,8 @@
 # Gaia
 
+- Linus Oleander - F120180
+- Daniel Tell - F120181
+
 ## Agents
 
 ![Agents](gaia.png)

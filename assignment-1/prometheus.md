@@ -1,5 +1,8 @@
 # Prometheus
 
+- Linus Oleander - F120180
+- Daniel Tell - F120181
+
 ## System overview
 
 See *Capability descriptors* for an graphical overview.
