@@ -87,8 +87,6 @@ Then I should be able to return a list of matched auctions
   - bid on auctions
   - notify users (seller and bidder) about auctions
 
-![prometheus](ov.png)
-
 ## Agent descriptors
 
 Name: Seller  
