@@ -82,7 +82,7 @@ Then I should be able to return a list of matched auctions
 
 ## System overview
 
-![Prometheus](prometheus.png)
+![prometheus](ov.png)
 
 ## Agent descriptors
 
@@ -158,7 +158,7 @@ Events:
 
 ## Capability descriptors
 
-![Mediator](mediator capabilities.png)
+![Mediator](mediator-capabilities.png)
 
 ## Data description
 
