@@ -1,5 +1,9 @@
 # Prometheus
 
+## System overview
+
+See *Capability descriptors* for an graphical overview.
+
 ## Scenarios
 
 ### User (Bidder / Seller)
