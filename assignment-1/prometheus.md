@@ -86,71 +86,79 @@ Then I should be able to return a list of matched auctions
 
 ## Agent descriptors
 
-Name: Seller
-Description: offers items
-Cardinality: N/A
-Functionalities included: none from the outside perspective
-Reads data: user profile
-Writes data: user profile
-Lifetime: Same life expectancy as the auction it self
-Interacts with: Mediator
-Trigger: A notification about an action
-Demise: Delete all corresponding auctions
-Events:
-  - auction ends
-  - new bid
+Name: Seller  
+Description: offers items  
+Cardinality: N/A  
+Lifetime: Indefinite  
+Create or destroyed: No  
+Initialisation: Connect to database  
+Functionalities included: none from the outside perspective  
+Reads data: user profile  
+Writes data: user profile  
+Lifetime: Same life expectancy as the auction it self  
+Interacts with: Mediator  
+Demise: Delete all corresponding auctions  
+Events:  
+  - auction ends  
+  - new bid  
 
 ---
 
-Name: Bidder:
-Description: makes bids for auctions
-Cardinality: N/A
-Functionalities included: none from the outside perspective
-Reads data: user profile
-Writes data: user profile
-Lifetime: Same life expectancy as the auction it self
-Interacts with: Mediator
-Create or destroyed: Always alive
-Triggers: A notification about an auction
-Demise: Delete all corresponding bidds
-Events:
-  - auction ends
-  - new bid
+Name: Bidder  
+Description: makes bids for auctions  
+Cardinality: N/A  
+Lifetime: Indefinite  
+Create or destroyed: No  
+Initialisation: Connect to database  
+Functionalities included: none from the outside perspective  
+Reads data: user profile  
+Writes data: user profile  
+Interacts with: Mediator  
+Demise: Delete all corresponding bidds  
+Events:  
+  - auction ends  
+  - new higher bid  
 
 ---
 
-Name: Mediator
-Description: starts autions, receives bids, declares winner
-Cardinality: Multiple based on dynamics of the system
-Functionalities included: notifies users (bidders and sellers) about auctions, ends auctions, creates auctions, take bidds
-Reads data: user profile, auctions and bidds
-Writes data: auctions and bidds
-Trigger: 
+Name: Mediator  
+Description: starts autions, receives bids, declares winner  
+Cardinality: Multiple based on dynamics of the system  
+Lifetime: Indefinite  
+Create or destroyed: No  
+Initialisation: Connect to database  
+Functionalities included: notifies users (bidders and sellers) about auctions, ends auctions, creates auctions, take bidds  
+Reads data: user profile, auctions and bidds  
+Writes data: auctions and bidds  
+Demise: Restart it and send alert to administrator  
+Data to keep track of: Auctions and bidds  
+Events:  
   - Bidder makes a bid
   - Creation of an auction
-  - An action ends
-Initialisation: Connection to database
-Demise: Restart it and send alert
-Data to keep track of: Auctions and bidds
-Events: None
 
 ---
 
-Name: Searcher
-Description: receives search queries, searches through database
-Cardinality: Multiple based on dynamics of the system
-Functionalities included: platform search engine
-Reads data: auctions
-Writes data: None
-Trigger: A user searches for an item
-Initialisation: Connection to database
-Demise: Restart it and send alert
-Data to keep track of: None
-Events: None
+Name: Searcher  
+Description: receives search queries, searches through database  
+Create or destroyed: No  
+Cardinality: Multiple based on dynamics of the system  
+Functionalities included: platform search engine  
+Reads data: auctions  
+Writes data: None  
+Initialisation: Connection to database  
+Lifetime: During search  
+Demise: Nothing  
+Data to keep track of: Auctions  
+Events:  
+  - search query
 
 ## Agent overview
 
 ![Agent overview](overview.png)
+
+## Capability descriptors
+
+![Mediator](mediator capabilities.png)
 
 ## Capability overview
 
