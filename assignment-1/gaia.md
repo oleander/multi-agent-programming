@@ -12,11 +12,27 @@
 
 Sells items on market
 
+#### Permissions
+
+- changes users
+
+##### Liveness
+
+Seller = (createAuction)*
+
 ### Bidder
 
 #### Description
 
 Bid items on market
+
+#### Permissions
+
+- changes users
+
+##### Liveness
+
+Bidder = (searchForItem.makeBid)*
 
 ### Searcher
 
@@ -50,6 +66,11 @@ Our platform auctioneer
 - description.length > 0
 - min_price > 0
 - price > Auction.higest_bid
+
+
+##### Liveness
+
+Mediator = (notifyWinnerOfAuction)*
 
 ## Protocol
 
