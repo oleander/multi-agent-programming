@@ -80,10 +80,6 @@ Then I should be able to return a list of matched auctions
   - bid on auctions
   - notify users (seller and bidder) about auctions
 
-## System overview
-
-![prometheus](ov.png)
-
 ## Agent descriptors
 
 Name: Seller  
@@ -154,13 +150,31 @@ Events:
 
 ## Agent overview
 
-![Agent overview](overview.png)
+![aoverview](overview.png)
 
 ## Capability descriptors
 
-![Mediator](mediator capabilities.png)
-![Bidder](capabilities bidder.png)
-![Seller](capabilities bidder.png)
+### Bidder
+
+![didder](capabilities-bidder.png)
+
+---
+
+### Searcher
+
+![searcher](capabilities-searcher.png)
+
+---
+
+### Mediator
+
+![mediators](mediator-capabilities.png)
+
+---
+
+### Seller
+
+![seller](seller-capabilities.png)
 
 ## Data description
 
