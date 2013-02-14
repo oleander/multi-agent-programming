@@ -189,6 +189,7 @@ Events:
 Name: Mediator
 Description: starts autions, receives bids, declares winner
 Cardinality: Multiple based on dynamics of the system
+Lifetime:
 Functionalities included: notifies users (bidders and sellers) about auctions, ends auctions, creates auctions, take bidds
 Reads data: user profile, auctions and bidds
 Writes data: auctions and bidds
@@ -218,6 +219,7 @@ Searcher:
 ## Agent overview
 
 ## Capability descriptors
+![Mediator](mediator capabilities.png)
 
 ## Capability overview
 
