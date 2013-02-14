@@ -235,3 +235,10 @@ Events:
 
 ## Protocol
 
+### Bidder
+
+![inter dia](inter dia.png)
+
+### Seller
+
+![inter dia2](inter dia2.png)
