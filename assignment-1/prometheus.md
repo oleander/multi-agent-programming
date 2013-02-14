@@ -158,7 +158,9 @@ Events:
 
 ## Capability descriptors
 
-![Mediator](mediator-capabilities.png)
+![Mediator](mediator capabilities.png)
+![Bidder](capabilities bidder.png)
+![Seller](capabilities bidder.png)
 
 ## Data description
 
