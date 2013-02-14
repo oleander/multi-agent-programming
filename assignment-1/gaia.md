@@ -16,9 +16,16 @@ Sells items on market
 
 - changes users
 
+#### Responsibilities
+
 ##### Liveness
 
-Seller = (createAuction)*
+```
+Seller = (
+  createAuction | 
+  notifyAboutEndedAuction.contactHigestBidderAction
+)*
+```
 
 ### Bidder
 
@@ -30,9 +37,18 @@ Bid items on market
 
 - changes users
 
+#### Responsibilities
+
 ##### Liveness
 
-Bidder = (searchForItem.makeBid)*
+```
+Bidder = (
+  searchForItem.makeBid | 
+  makeBid | 
+  notifyNotHighestBidder.makeBid* |
+  notifyWinnerOfAuction.contactSellerAction
+)*
+```
 
 ### Searcher
 
@@ -43,6 +59,14 @@ Search for items
 #### Permissions
 
 - reads auctions
+
+#### Responsibilities
+
+##### Liveness
+
+```
+Searcher = (searchForItem.findItem.respondWithSearchResultAction)*
+```
 
 ### Mediator
 
@@ -70,7 +94,18 @@ Our platform auctioneer
 
 ##### Liveness
 
-Mediator = (notifyWinnerOfAuction)*
+```
+Mediator = (
+  checkForEndedAuctions.(
+    notifyWinnerOfAuction |
+    notifyLoserOfAuction |
+    notifyNotHighestBidder |
+    notifyAboutEndedAuction
+  )|
+  makeBid.createBidAction.respondWithBidStatusAction |
+  createAuction.createAuctionAction.respondWithAuctionStatusAction
+)*
+```
 
 ## Protocol
 
