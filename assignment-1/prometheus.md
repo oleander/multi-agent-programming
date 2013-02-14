@@ -198,6 +198,12 @@ Events:
   - Partner: Seller
   - Input: *{auction_id: Integer, winner_id: Integer, price: Integer}*
   - Output: Void
+- notifySellerAboutNewBid()
+  - Description: Notify seller about new bidds on auction
+  - Initiator: Mediator
+  - Partner: Seller
+  - Input: *{auction_id: Integer, bidder_id: Integer, price: Integer}*
+  - Output: Void
 - createAuction()
   - Description: Create auction for item
   - Initiator: Seller
