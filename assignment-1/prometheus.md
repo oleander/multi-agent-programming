@@ -84,9 +84,22 @@ Then I should be able to return a list of matched auctions
   Description: Searches for auctions that matches a given query
   Actions, Percepts, Events: SearchForItem
   Data used and produced: AuctionDB, searchQuery, AuctionSearchResult
-  Interaction description: Contact between Bidder and SearchHelper
+  Interaction description: Contact between Bidder and Searcher
 
-  Name: 
+
+  Name: CreateAuction
+  Description: Create a new auction
+  Action, Percept, Events: createAuction
+
+  Name: BidOnAuction
+  Description: 
+  Actions, Percepts, Events: 
+  Data used and produced: AuctionDB, searchQuery, AuctionSearchResult
+  Interaction description: Contact between Bidder and Searcher
+
+  Name: NotifyUsers
+  Description: Notifies users about auctions
+  Actions, Percepts, Events: makeBid
 
 ## System overview
 
