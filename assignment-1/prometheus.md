@@ -80,31 +80,10 @@ Then I should be able to return a list of matched auctions
   - bid on auctions
   - notify users (seller and bidder) about auctions
 
-  Name: Search
-  Description: Searches for auctions that matches a given query
-  Actions, Percepts, Events: SearchForItem
-  Data used and produced: AuctionDB, searchQuery, AuctionSearchResult
-  Interaction description: Contact between Bidder and Searcher
-
-
-  Name: CreateAuction
-  Description: Create a new auction
-  Action, Percept, Events: createAuction
-
-  Name: BidOnAuction
-  Description: 
-  Actions, Percepts, Events: 
-  Data used and produced: AuctionDB, searchQuery, AuctionSearchResult
-  Interaction description: Contact between Bidder and Searcher
-
-  Name: NotifyUsers
-  Description: Notifies users about auctions
-  Actions, Percepts, Events: makeBid
-
-## System overview
-
 ![prometheus](ov.png)
 
+=======
+>>>>>>> e5850a435846d626c03adc37c6ab2694b6a0a4a5
 ## Agent descriptors
 
 Name: Seller  
@@ -175,13 +154,31 @@ Events:
 
 ## Agent overview
 
-![Agent overview](overview.png)
+![aoverview](overview.png)
 
 ## Capability descriptors
 
-![Mediator](mediator capabilities.png)
-![Bidder](capabilities bidder.png)
-![Seller](capabilities bidder.png)
+### Bidder
+
+![didder](capabilities-bidder.png)
+
+---
+
+### Searcher
+
+![searcher](capabilities-searcher.png)
+
+---
+
+### Mediator
+
+![mediators](mediator-capabilities.png)
+
+---
+
+### Seller
+
+![seller](seller-capabilities.png)
 
 ## Data description
 
